@@ -1,3 +1,21 @@
+# WatchListRecommender
+A website that recommends you a selection of movies and series for all those days when you want to try something new or just bored of getting the same recommendations.
+
+## Features
+* It has different genres to select from.
+* From fantasy to fiction to comedy and action this app covers all your needs.
+* The website is designed for ease of the user.
+* Consists of images and font styles.
+* Contains a footer with links to the developers social handles.
+
+## Technologies
+* Html
+* JavaScript
+* CSS
+
+## Live link
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
