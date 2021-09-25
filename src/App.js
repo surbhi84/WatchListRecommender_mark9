@@ -32,7 +32,7 @@ function App() {
               <div className="block">
                 <div className="title">{rec.title}</div>
                 <span className="ispan">{rec.description}</span>
-                <div>Rating: {rec.rating}/10</div>
+                <div className="rating">Rating: {rec.rating}/10</div>
               </div>
             ))}
           </section>
