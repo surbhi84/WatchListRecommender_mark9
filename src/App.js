@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { data } from "./data/data";
 function App() {
-  const categories = ["Horror", "Comedy", "Romantic", "Fiction", "Action"];
+  const categories = Object.keys(data);
   const [currentCategory, setCurrentCategory] = useState();
   return (
     <div className="App">
