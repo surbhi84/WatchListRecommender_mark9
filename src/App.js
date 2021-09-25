@@ -3,37 +3,41 @@ import "./App.css";
 import { data } from "./data/data";
 function App() {
   const categories = Object.keys(data);
-  const [currentCategory, setCurrentCategory] = useState();
+  const [currentCategory, setCurrentCategory] = useState("Horror");
   return (
     <div className="App">
       <header>Watch List Recommendation</header>
-      <section>
-        Category:{" "}
-        {categories.map((category) => {
-          return (
-            <span
-              onClick={() => {
-                setCurrentCategory(category);
-              }}
-            >
-              {" "}
-              {category}
-            </span>
-          );
-        })}
-      </section>
-      {currentCategory && (
-        <section>
-          {data[currentCategory].map((rec) => (
-            <div>
-              <div>{rec.title}</div>
-              <span>{rec.description}</span>
-              <span>{rec.rating}</span>
-            </div>
-          ))}
+      <div className="backcard">
+        <section className="section">
+          Category:{" "}
+          {categories.map((category) => {
+            return (
+              <span
+                style={{
+                  color: category == currentCategory ? "white" : "black",
+                }}
+                onClick={() => {
+                  setCurrentCategory(category);
+                }}
+              >
+                {" "}
+                {category}
+              </span>
+            );
+          })}
         </section>
-      )}
-
+        {currentCategory && (
+          <section>
+            {data[currentCategory].map((rec) => (
+              <div className="block">
+                <div className="title">{rec.title}</div>
+                <span className="ispan">{rec.description}</span>
+                <div>Rating: {rec.rating}/10</div>
+              </div>
+            ))}
+          </section>
+        )}
+      </div>
       <footer>
         <ul>
           <li>
